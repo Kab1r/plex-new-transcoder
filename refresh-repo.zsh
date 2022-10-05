@@ -60,7 +60,7 @@ query_pms_update_service() {
         [[ -n "$api_version" ]] || die "Failed to get API version from update service"
         pms_url="`cat "$1" | jq --raw-output '.computer.FreeBSD.releases[].url'`"
         [[ -n "$pms_url" ]] || die "Failed to get archive URL from update service"
-    } =(curl "https://plex.tv/api/downloads/1.json")
+    } =(curl "https://plex.tv/api/downloads/5.json")
 }
 
 pms_requires_update() {
